@@ -16,10 +16,18 @@ development:
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+development:
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: minimart
+  username: postgres
+  password: 4477
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql            
+  host: ec2-44-209-57-4.compute-1.amazonaws.com                         # VM IP
+  port: 5432                          # VM Port 
+  database: dc8knhlb9rehi7             # Database Name
+  username: ellmddlywtyeny                 # User Name
+  password: ad4d6fe8ed707585f26a9d7a22cfbcf3257894bcefb55cf082e9c54f86c7322f   
